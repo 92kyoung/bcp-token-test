@@ -1,0 +1,5 @@
+db: 
+  host: progress
+  username: 'username'
+  password: 'userpassword'
+  synchronize: false

@@ -1,0 +1,7 @@
+db: 
+  host: progress
+  username: 'username'
+  password: 'userpassword'
+  synchronize: true
+
+web3SignerURL: 'http://meta-net.hanati.co.kr:6100'
