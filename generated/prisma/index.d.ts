@@ -14,10 +14,10 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model Book
+ * Model erc20token
  * 
  */
-export type Book = $Result.DefaultSelection<Prisma.$BookPayload>
+export type erc20token = $Result.DefaultSelection<Prisma.$erc20tokenPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -26,8 +26,8 @@ export type Book = $Result.DefaultSelection<Prisma.$BookPayload>
  * @example
  * ```
  * const prisma = new PrismaClient()
- * // Fetch zero or more Books
- * const books = await prisma.book.findMany()
+ * // Fetch zero or more Erc20tokens
+ * const erc20tokens = await prisma.erc20token.findMany()
  * ```
  *
  *
@@ -47,8 +47,8 @@ export class PrismaClient<
    * @example
    * ```
    * const prisma = new PrismaClient()
-   * // Fetch zero or more Books
-   * const books = await prisma.book.findMany()
+   * // Fetch zero or more Erc20tokens
+   * const erc20tokens = await prisma.erc20token.findMany()
    * ```
    *
    *
@@ -145,14 +145,14 @@ export class PrismaClient<
   }>>
 
       /**
-   * `prisma.book`: Exposes CRUD operations for the **Book** model.
+   * `prisma.erc20token`: Exposes CRUD operations for the **erc20token** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Books
-    * const books = await prisma.book.findMany()
+    * // Fetch zero or more Erc20tokens
+    * const erc20tokens = await prisma.erc20token.findMany()
     * ```
     */
-  get book(): Prisma.BookDelegate<ExtArgs, ClientOptions>;
+  get erc20token(): Prisma.erc20tokenDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -593,7 +593,7 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    Book: 'Book'
+    erc20token: 'erc20token'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -612,81 +612,81 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "book"
+      modelProps: "erc20token"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
-      Book: {
-        payload: Prisma.$BookPayload<ExtArgs>
-        fields: Prisma.BookFieldRefs
+      erc20token: {
+        payload: Prisma.$erc20tokenPayload<ExtArgs>
+        fields: Prisma.erc20tokenFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.BookFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$BookPayload> | null
+            args: Prisma.erc20tokenFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$erc20tokenPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.BookFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$BookPayload>
+            args: Prisma.erc20tokenFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$erc20tokenPayload>
           }
           findFirst: {
-            args: Prisma.BookFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$BookPayload> | null
+            args: Prisma.erc20tokenFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$erc20tokenPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.BookFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$BookPayload>
+            args: Prisma.erc20tokenFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$erc20tokenPayload>
           }
           findMany: {
-            args: Prisma.BookFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$BookPayload>[]
+            args: Prisma.erc20tokenFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$erc20tokenPayload>[]
           }
           create: {
-            args: Prisma.BookCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$BookPayload>
+            args: Prisma.erc20tokenCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$erc20tokenPayload>
           }
           createMany: {
-            args: Prisma.BookCreateManyArgs<ExtArgs>
+            args: Prisma.erc20tokenCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.BookCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$BookPayload>[]
+            args: Prisma.erc20tokenCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$erc20tokenPayload>[]
           }
           delete: {
-            args: Prisma.BookDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$BookPayload>
+            args: Prisma.erc20tokenDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$erc20tokenPayload>
           }
           update: {
-            args: Prisma.BookUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$BookPayload>
+            args: Prisma.erc20tokenUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$erc20tokenPayload>
           }
           deleteMany: {
-            args: Prisma.BookDeleteManyArgs<ExtArgs>
+            args: Prisma.erc20tokenDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.BookUpdateManyArgs<ExtArgs>
+            args: Prisma.erc20tokenUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.BookUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$BookPayload>[]
+            args: Prisma.erc20tokenUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$erc20tokenPayload>[]
           }
           upsert: {
-            args: Prisma.BookUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$BookPayload>
+            args: Prisma.erc20tokenUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$erc20tokenPayload>
           }
           aggregate: {
-            args: Prisma.BookAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateBook>
+            args: Prisma.Erc20tokenAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateErc20token>
           }
           groupBy: {
-            args: Prisma.BookGroupByArgs<ExtArgs>
-            result: $Utils.Optional<BookGroupByOutputType>[]
+            args: Prisma.erc20tokenGroupByArgs<ExtArgs>
+            result: $Utils.Optional<Erc20tokenGroupByOutputType>[]
           }
           count: {
-            args: Prisma.BookCountArgs<ExtArgs>
-            result: $Utils.Optional<BookCountAggregateOutputType> | number
+            args: Prisma.erc20tokenCountArgs<ExtArgs>
+            result: $Utils.Optional<Erc20tokenCountAggregateOutputType> | number
           }
         }
       }
@@ -774,7 +774,7 @@ export namespace Prisma {
     omit?: Prisma.GlobalOmitConfig
   }
   export type GlobalOmitConfig = {
-    book?: BookOmit
+    erc20token?: erc20tokenOmit
   }
 
   /* Types for Logging */
@@ -870,362 +870,358 @@ export namespace Prisma {
    */
 
   /**
-   * Model Book
+   * Model erc20token
    */
 
-  export type AggregateBook = {
-    _count: BookCountAggregateOutputType | null
-    _avg: BookAvgAggregateOutputType | null
-    _sum: BookSumAggregateOutputType | null
-    _min: BookMinAggregateOutputType | null
-    _max: BookMaxAggregateOutputType | null
+  export type AggregateErc20token = {
+    _count: Erc20tokenCountAggregateOutputType | null
+    _avg: Erc20tokenAvgAggregateOutputType | null
+    _sum: Erc20tokenSumAggregateOutputType | null
+    _min: Erc20tokenMinAggregateOutputType | null
+    _max: Erc20tokenMaxAggregateOutputType | null
   }
 
-  export type BookAvgAggregateOutputType = {
+  export type Erc20tokenAvgAggregateOutputType = {
     id: number | null
-    year: number | null
   }
 
-  export type BookSumAggregateOutputType = {
+  export type Erc20tokenSumAggregateOutputType = {
     id: number | null
-    year: number | null
   }
 
-  export type BookMinAggregateOutputType = {
+  export type Erc20tokenMinAggregateOutputType = {
     id: number | null
-    title: string | null
-    author: string | null
-    year: number | null
+    name: string | null
+    symbol: string | null
+    contractAddress: string | null
   }
 
-  export type BookMaxAggregateOutputType = {
+  export type Erc20tokenMaxAggregateOutputType = {
     id: number | null
-    title: string | null
-    author: string | null
-    year: number | null
+    name: string | null
+    symbol: string | null
+    contractAddress: string | null
   }
 
-  export type BookCountAggregateOutputType = {
+  export type Erc20tokenCountAggregateOutputType = {
     id: number
-    title: number
-    author: number
-    year: number
+    name: number
+    symbol: number
+    contractAddress: number
     _all: number
   }
 
 
-  export type BookAvgAggregateInputType = {
+  export type Erc20tokenAvgAggregateInputType = {
     id?: true
-    year?: true
   }
 
-  export type BookSumAggregateInputType = {
+  export type Erc20tokenSumAggregateInputType = {
     id?: true
-    year?: true
   }
 
-  export type BookMinAggregateInputType = {
+  export type Erc20tokenMinAggregateInputType = {
     id?: true
-    title?: true
-    author?: true
-    year?: true
+    name?: true
+    symbol?: true
+    contractAddress?: true
   }
 
-  export type BookMaxAggregateInputType = {
+  export type Erc20tokenMaxAggregateInputType = {
     id?: true
-    title?: true
-    author?: true
-    year?: true
+    name?: true
+    symbol?: true
+    contractAddress?: true
   }
 
-  export type BookCountAggregateInputType = {
+  export type Erc20tokenCountAggregateInputType = {
     id?: true
-    title?: true
-    author?: true
-    year?: true
+    name?: true
+    symbol?: true
+    contractAddress?: true
     _all?: true
   }
 
-  export type BookAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type Erc20tokenAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Book to aggregate.
+     * Filter which erc20token to aggregate.
      */
-    where?: BookWhereInput
+    where?: erc20tokenWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Books to fetch.
+     * Determine the order of erc20tokens to fetch.
      */
-    orderBy?: BookOrderByWithRelationInput | BookOrderByWithRelationInput[]
+    orderBy?: erc20tokenOrderByWithRelationInput | erc20tokenOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: BookWhereUniqueInput
+    cursor?: erc20tokenWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Books from the position of the cursor.
+     * Take `±n` erc20tokens from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Books.
+     * Skip the first `n` erc20tokens.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Books
+     * Count returned erc20tokens
     **/
-    _count?: true | BookCountAggregateInputType
+    _count?: true | Erc20tokenCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: BookAvgAggregateInputType
+    _avg?: Erc20tokenAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: BookSumAggregateInputType
+    _sum?: Erc20tokenSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: BookMinAggregateInputType
+    _min?: Erc20tokenMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: BookMaxAggregateInputType
+    _max?: Erc20tokenMaxAggregateInputType
   }
 
-  export type GetBookAggregateType<T extends BookAggregateArgs> = {
-        [P in keyof T & keyof AggregateBook]: P extends '_count' | 'count'
+  export type GetErc20tokenAggregateType<T extends Erc20tokenAggregateArgs> = {
+        [P in keyof T & keyof AggregateErc20token]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateBook[P]>
-      : GetScalarType<T[P], AggregateBook[P]>
+        : GetScalarType<T[P], AggregateErc20token[P]>
+      : GetScalarType<T[P], AggregateErc20token[P]>
   }
 
 
 
 
-  export type BookGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: BookWhereInput
-    orderBy?: BookOrderByWithAggregationInput | BookOrderByWithAggregationInput[]
-    by: BookScalarFieldEnum[] | BookScalarFieldEnum
-    having?: BookScalarWhereWithAggregatesInput
+  export type erc20tokenGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: erc20tokenWhereInput
+    orderBy?: erc20tokenOrderByWithAggregationInput | erc20tokenOrderByWithAggregationInput[]
+    by: Erc20tokenScalarFieldEnum[] | Erc20tokenScalarFieldEnum
+    having?: erc20tokenScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: BookCountAggregateInputType | true
-    _avg?: BookAvgAggregateInputType
-    _sum?: BookSumAggregateInputType
-    _min?: BookMinAggregateInputType
-    _max?: BookMaxAggregateInputType
+    _count?: Erc20tokenCountAggregateInputType | true
+    _avg?: Erc20tokenAvgAggregateInputType
+    _sum?: Erc20tokenSumAggregateInputType
+    _min?: Erc20tokenMinAggregateInputType
+    _max?: Erc20tokenMaxAggregateInputType
   }
 
-  export type BookGroupByOutputType = {
+  export type Erc20tokenGroupByOutputType = {
     id: number
-    title: string
-    author: string
-    year: number
-    _count: BookCountAggregateOutputType | null
-    _avg: BookAvgAggregateOutputType | null
-    _sum: BookSumAggregateOutputType | null
-    _min: BookMinAggregateOutputType | null
-    _max: BookMaxAggregateOutputType | null
+    name: string
+    symbol: string
+    contractAddress: string
+    _count: Erc20tokenCountAggregateOutputType | null
+    _avg: Erc20tokenAvgAggregateOutputType | null
+    _sum: Erc20tokenSumAggregateOutputType | null
+    _min: Erc20tokenMinAggregateOutputType | null
+    _max: Erc20tokenMaxAggregateOutputType | null
   }
 
-  type GetBookGroupByPayload<T extends BookGroupByArgs> = Prisma.PrismaPromise<
+  type GetErc20tokenGroupByPayload<T extends erc20tokenGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<BookGroupByOutputType, T['by']> &
+      PickEnumerable<Erc20tokenGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof BookGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof Erc20tokenGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], BookGroupByOutputType[P]>
-            : GetScalarType<T[P], BookGroupByOutputType[P]>
+              : GetScalarType<T[P], Erc20tokenGroupByOutputType[P]>
+            : GetScalarType<T[P], Erc20tokenGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type BookSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type erc20tokenSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    title?: boolean
-    author?: boolean
-    year?: boolean
-  }, ExtArgs["result"]["book"]>
+    name?: boolean
+    symbol?: boolean
+    contractAddress?: boolean
+  }, ExtArgs["result"]["erc20token"]>
 
-  export type BookSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type erc20tokenSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    title?: boolean
-    author?: boolean
-    year?: boolean
-  }, ExtArgs["result"]["book"]>
+    name?: boolean
+    symbol?: boolean
+    contractAddress?: boolean
+  }, ExtArgs["result"]["erc20token"]>
 
-  export type BookSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type erc20tokenSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    title?: boolean
-    author?: boolean
-    year?: boolean
-  }, ExtArgs["result"]["book"]>
+    name?: boolean
+    symbol?: boolean
+    contractAddress?: boolean
+  }, ExtArgs["result"]["erc20token"]>
 
-  export type BookSelectScalar = {
+  export type erc20tokenSelectScalar = {
     id?: boolean
-    title?: boolean
-    author?: boolean
-    year?: boolean
+    name?: boolean
+    symbol?: boolean
+    contractAddress?: boolean
   }
 
-  export type BookOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "author" | "year", ExtArgs["result"]["book"]>
+  export type erc20tokenOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "symbol" | "contractAddress", ExtArgs["result"]["erc20token"]>
 
-  export type $BookPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Book"
+  export type $erc20tokenPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "erc20token"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: number
-      title: string
-      author: string
-      year: number
-    }, ExtArgs["result"]["book"]>
+      name: string
+      symbol: string
+      contractAddress: string
+    }, ExtArgs["result"]["erc20token"]>
     composites: {}
   }
 
-  type BookGetPayload<S extends boolean | null | undefined | BookDefaultArgs> = $Result.GetResult<Prisma.$BookPayload, S>
+  type erc20tokenGetPayload<S extends boolean | null | undefined | erc20tokenDefaultArgs> = $Result.GetResult<Prisma.$erc20tokenPayload, S>
 
-  type BookCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<BookFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: BookCountAggregateInputType | true
+  type erc20tokenCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<erc20tokenFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: Erc20tokenCountAggregateInputType | true
     }
 
-  export interface BookDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Book'], meta: { name: 'Book' } }
+  export interface erc20tokenDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['erc20token'], meta: { name: 'erc20token' } }
     /**
-     * Find zero or one Book that matches the filter.
-     * @param {BookFindUniqueArgs} args - Arguments to find a Book
+     * Find zero or one Erc20token that matches the filter.
+     * @param {erc20tokenFindUniqueArgs} args - Arguments to find a Erc20token
      * @example
-     * // Get one Book
-     * const book = await prisma.book.findUnique({
+     * // Get one Erc20token
+     * const erc20token = await prisma.erc20token.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends BookFindUniqueArgs>(args: SelectSubset<T, BookFindUniqueArgs<ExtArgs>>): Prisma__BookClient<$Result.GetResult<Prisma.$BookPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends erc20tokenFindUniqueArgs>(args: SelectSubset<T, erc20tokenFindUniqueArgs<ExtArgs>>): Prisma__erc20tokenClient<$Result.GetResult<Prisma.$erc20tokenPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Book that matches the filter or throw an error with `error.code='P2025'`
+     * Find one Erc20token that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {BookFindUniqueOrThrowArgs} args - Arguments to find a Book
+     * @param {erc20tokenFindUniqueOrThrowArgs} args - Arguments to find a Erc20token
      * @example
-     * // Get one Book
-     * const book = await prisma.book.findUniqueOrThrow({
+     * // Get one Erc20token
+     * const erc20token = await prisma.erc20token.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends BookFindUniqueOrThrowArgs>(args: SelectSubset<T, BookFindUniqueOrThrowArgs<ExtArgs>>): Prisma__BookClient<$Result.GetResult<Prisma.$BookPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends erc20tokenFindUniqueOrThrowArgs>(args: SelectSubset<T, erc20tokenFindUniqueOrThrowArgs<ExtArgs>>): Prisma__erc20tokenClient<$Result.GetResult<Prisma.$erc20tokenPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Book that matches the filter.
+     * Find the first Erc20token that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {BookFindFirstArgs} args - Arguments to find a Book
+     * @param {erc20tokenFindFirstArgs} args - Arguments to find a Erc20token
      * @example
-     * // Get one Book
-     * const book = await prisma.book.findFirst({
+     * // Get one Erc20token
+     * const erc20token = await prisma.erc20token.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends BookFindFirstArgs>(args?: SelectSubset<T, BookFindFirstArgs<ExtArgs>>): Prisma__BookClient<$Result.GetResult<Prisma.$BookPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends erc20tokenFindFirstArgs>(args?: SelectSubset<T, erc20tokenFindFirstArgs<ExtArgs>>): Prisma__erc20tokenClient<$Result.GetResult<Prisma.$erc20tokenPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Book that matches the filter or
+     * Find the first Erc20token that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {BookFindFirstOrThrowArgs} args - Arguments to find a Book
+     * @param {erc20tokenFindFirstOrThrowArgs} args - Arguments to find a Erc20token
      * @example
-     * // Get one Book
-     * const book = await prisma.book.findFirstOrThrow({
+     * // Get one Erc20token
+     * const erc20token = await prisma.erc20token.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends BookFindFirstOrThrowArgs>(args?: SelectSubset<T, BookFindFirstOrThrowArgs<ExtArgs>>): Prisma__BookClient<$Result.GetResult<Prisma.$BookPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends erc20tokenFindFirstOrThrowArgs>(args?: SelectSubset<T, erc20tokenFindFirstOrThrowArgs<ExtArgs>>): Prisma__erc20tokenClient<$Result.GetResult<Prisma.$erc20tokenPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Books that matches the filter.
+     * Find zero or more Erc20tokens that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {BookFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {erc20tokenFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Books
-     * const books = await prisma.book.findMany()
+     * // Get all Erc20tokens
+     * const erc20tokens = await prisma.erc20token.findMany()
      * 
-     * // Get first 10 Books
-     * const books = await prisma.book.findMany({ take: 10 })
+     * // Get first 10 Erc20tokens
+     * const erc20tokens = await prisma.erc20token.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const bookWithIdOnly = await prisma.book.findMany({ select: { id: true } })
+     * const erc20tokenWithIdOnly = await prisma.erc20token.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends BookFindManyArgs>(args?: SelectSubset<T, BookFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends erc20tokenFindManyArgs>(args?: SelectSubset<T, erc20tokenFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$erc20tokenPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Book.
-     * @param {BookCreateArgs} args - Arguments to create a Book.
+     * Create a Erc20token.
+     * @param {erc20tokenCreateArgs} args - Arguments to create a Erc20token.
      * @example
-     * // Create one Book
-     * const Book = await prisma.book.create({
+     * // Create one Erc20token
+     * const Erc20token = await prisma.erc20token.create({
      *   data: {
-     *     // ... data to create a Book
+     *     // ... data to create a Erc20token
      *   }
      * })
      * 
      */
-    create<T extends BookCreateArgs>(args: SelectSubset<T, BookCreateArgs<ExtArgs>>): Prisma__BookClient<$Result.GetResult<Prisma.$BookPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends erc20tokenCreateArgs>(args: SelectSubset<T, erc20tokenCreateArgs<ExtArgs>>): Prisma__erc20tokenClient<$Result.GetResult<Prisma.$erc20tokenPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Books.
-     * @param {BookCreateManyArgs} args - Arguments to create many Books.
+     * Create many Erc20tokens.
+     * @param {erc20tokenCreateManyArgs} args - Arguments to create many Erc20tokens.
      * @example
-     * // Create many Books
-     * const book = await prisma.book.createMany({
+     * // Create many Erc20tokens
+     * const erc20token = await prisma.erc20token.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends BookCreateManyArgs>(args?: SelectSubset<T, BookCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends erc20tokenCreateManyArgs>(args?: SelectSubset<T, erc20tokenCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Books and returns the data saved in the database.
-     * @param {BookCreateManyAndReturnArgs} args - Arguments to create many Books.
+     * Create many Erc20tokens and returns the data saved in the database.
+     * @param {erc20tokenCreateManyAndReturnArgs} args - Arguments to create many Erc20tokens.
      * @example
-     * // Create many Books
-     * const book = await prisma.book.createManyAndReturn({
+     * // Create many Erc20tokens
+     * const erc20token = await prisma.erc20token.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Books and only return the `id`
-     * const bookWithIdOnly = await prisma.book.createManyAndReturn({
+     * // Create many Erc20tokens and only return the `id`
+     * const erc20tokenWithIdOnly = await prisma.erc20token.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -1235,28 +1231,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends BookCreateManyAndReturnArgs>(args?: SelectSubset<T, BookCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends erc20tokenCreateManyAndReturnArgs>(args?: SelectSubset<T, erc20tokenCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$erc20tokenPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Book.
-     * @param {BookDeleteArgs} args - Arguments to delete one Book.
+     * Delete a Erc20token.
+     * @param {erc20tokenDeleteArgs} args - Arguments to delete one Erc20token.
      * @example
-     * // Delete one Book
-     * const Book = await prisma.book.delete({
+     * // Delete one Erc20token
+     * const Erc20token = await prisma.erc20token.delete({
      *   where: {
-     *     // ... filter to delete one Book
+     *     // ... filter to delete one Erc20token
      *   }
      * })
      * 
      */
-    delete<T extends BookDeleteArgs>(args: SelectSubset<T, BookDeleteArgs<ExtArgs>>): Prisma__BookClient<$Result.GetResult<Prisma.$BookPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends erc20tokenDeleteArgs>(args: SelectSubset<T, erc20tokenDeleteArgs<ExtArgs>>): Prisma__erc20tokenClient<$Result.GetResult<Prisma.$erc20tokenPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Book.
-     * @param {BookUpdateArgs} args - Arguments to update one Book.
+     * Update one Erc20token.
+     * @param {erc20tokenUpdateArgs} args - Arguments to update one Erc20token.
      * @example
-     * // Update one Book
-     * const book = await prisma.book.update({
+     * // Update one Erc20token
+     * const erc20token = await prisma.erc20token.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1266,30 +1262,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends BookUpdateArgs>(args: SelectSubset<T, BookUpdateArgs<ExtArgs>>): Prisma__BookClient<$Result.GetResult<Prisma.$BookPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends erc20tokenUpdateArgs>(args: SelectSubset<T, erc20tokenUpdateArgs<ExtArgs>>): Prisma__erc20tokenClient<$Result.GetResult<Prisma.$erc20tokenPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Books.
-     * @param {BookDeleteManyArgs} args - Arguments to filter Books to delete.
+     * Delete zero or more Erc20tokens.
+     * @param {erc20tokenDeleteManyArgs} args - Arguments to filter Erc20tokens to delete.
      * @example
-     * // Delete a few Books
-     * const { count } = await prisma.book.deleteMany({
+     * // Delete a few Erc20tokens
+     * const { count } = await prisma.erc20token.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends BookDeleteManyArgs>(args?: SelectSubset<T, BookDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends erc20tokenDeleteManyArgs>(args?: SelectSubset<T, erc20tokenDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Books.
+     * Update zero or more Erc20tokens.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {BookUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {erc20tokenUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Books
-     * const book = await prisma.book.updateMany({
+     * // Update many Erc20tokens
+     * const erc20token = await prisma.erc20token.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1299,14 +1295,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends BookUpdateManyArgs>(args: SelectSubset<T, BookUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends erc20tokenUpdateManyArgs>(args: SelectSubset<T, erc20tokenUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Books and returns the data updated in the database.
-     * @param {BookUpdateManyAndReturnArgs} args - Arguments to update many Books.
+     * Update zero or more Erc20tokens and returns the data updated in the database.
+     * @param {erc20tokenUpdateManyAndReturnArgs} args - Arguments to update many Erc20tokens.
      * @example
-     * // Update many Books
-     * const book = await prisma.book.updateManyAndReturn({
+     * // Update many Erc20tokens
+     * const erc20token = await prisma.erc20token.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1315,8 +1311,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Books and only return the `id`
-     * const bookWithIdOnly = await prisma.book.updateManyAndReturn({
+     * // Update zero or more Erc20tokens and only return the `id`
+     * const erc20tokenWithIdOnly = await prisma.erc20token.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -1329,56 +1325,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends BookUpdateManyAndReturnArgs>(args: SelectSubset<T, BookUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends erc20tokenUpdateManyAndReturnArgs>(args: SelectSubset<T, erc20tokenUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$erc20tokenPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Book.
-     * @param {BookUpsertArgs} args - Arguments to update or create a Book.
+     * Create or update one Erc20token.
+     * @param {erc20tokenUpsertArgs} args - Arguments to update or create a Erc20token.
      * @example
-     * // Update or create a Book
-     * const book = await prisma.book.upsert({
+     * // Update or create a Erc20token
+     * const erc20token = await prisma.erc20token.upsert({
      *   create: {
-     *     // ... data to create a Book
+     *     // ... data to create a Erc20token
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Book we want to update
+     *     // ... the filter for the Erc20token we want to update
      *   }
      * })
      */
-    upsert<T extends BookUpsertArgs>(args: SelectSubset<T, BookUpsertArgs<ExtArgs>>): Prisma__BookClient<$Result.GetResult<Prisma.$BookPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends erc20tokenUpsertArgs>(args: SelectSubset<T, erc20tokenUpsertArgs<ExtArgs>>): Prisma__erc20tokenClient<$Result.GetResult<Prisma.$erc20tokenPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Books.
+     * Count the number of Erc20tokens.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {BookCountArgs} args - Arguments to filter Books to count.
+     * @param {erc20tokenCountArgs} args - Arguments to filter Erc20tokens to count.
      * @example
-     * // Count the number of Books
-     * const count = await prisma.book.count({
+     * // Count the number of Erc20tokens
+     * const count = await prisma.erc20token.count({
      *   where: {
-     *     // ... the filter for the Books we want to count
+     *     // ... the filter for the Erc20tokens we want to count
      *   }
      * })
     **/
-    count<T extends BookCountArgs>(
-      args?: Subset<T, BookCountArgs>,
+    count<T extends erc20tokenCountArgs>(
+      args?: Subset<T, erc20tokenCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], BookCountAggregateOutputType>
+          : GetScalarType<T['select'], Erc20tokenCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Book.
+     * Allows you to perform aggregations operations on a Erc20token.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {BookAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {Erc20tokenAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -1398,13 +1394,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends BookAggregateArgs>(args: Subset<T, BookAggregateArgs>): Prisma.PrismaPromise<GetBookAggregateType<T>>
+    aggregate<T extends Erc20tokenAggregateArgs>(args: Subset<T, Erc20tokenAggregateArgs>): Prisma.PrismaPromise<GetErc20tokenAggregateType<T>>
 
     /**
-     * Group by Book.
+     * Group by Erc20token.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {BookGroupByArgs} args - Group by arguments.
+     * @param {erc20tokenGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1419,14 +1415,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends BookGroupByArgs,
+      T extends erc20tokenGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: BookGroupByArgs['orderBy'] }
-        : { orderBy?: BookGroupByArgs['orderBy'] },
+        ? { orderBy: erc20tokenGroupByArgs['orderBy'] }
+        : { orderBy?: erc20tokenGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -1475,20 +1471,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, BookGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetBookGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, erc20tokenGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetErc20tokenGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Book model
+   * Fields of the erc20token model
    */
-  readonly fields: BookFieldRefs;
+  readonly fields: erc20tokenFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Book.
+   * The delegate class that acts as a "Promise-like" for erc20token.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__BookClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__erc20tokenClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -1516,376 +1512,376 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Book model
+   * Fields of the erc20token model
    */
-  interface BookFieldRefs {
-    readonly id: FieldRef<"Book", 'Int'>
-    readonly title: FieldRef<"Book", 'String'>
-    readonly author: FieldRef<"Book", 'String'>
-    readonly year: FieldRef<"Book", 'Int'>
+  interface erc20tokenFieldRefs {
+    readonly id: FieldRef<"erc20token", 'Int'>
+    readonly name: FieldRef<"erc20token", 'String'>
+    readonly symbol: FieldRef<"erc20token", 'String'>
+    readonly contractAddress: FieldRef<"erc20token", 'String'>
   }
     
 
   // Custom InputTypes
   /**
-   * Book findUnique
+   * erc20token findUnique
    */
-  export type BookFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type erc20tokenFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Book
+     * Select specific fields to fetch from the erc20token
      */
-    select?: BookSelect<ExtArgs> | null
+    select?: erc20tokenSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Book
+     * Omit specific fields from the erc20token
      */
-    omit?: BookOmit<ExtArgs> | null
+    omit?: erc20tokenOmit<ExtArgs> | null
     /**
-     * Filter, which Book to fetch.
+     * Filter, which erc20token to fetch.
      */
-    where: BookWhereUniqueInput
+    where: erc20tokenWhereUniqueInput
   }
 
   /**
-   * Book findUniqueOrThrow
+   * erc20token findUniqueOrThrow
    */
-  export type BookFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type erc20tokenFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Book
+     * Select specific fields to fetch from the erc20token
      */
-    select?: BookSelect<ExtArgs> | null
+    select?: erc20tokenSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Book
+     * Omit specific fields from the erc20token
      */
-    omit?: BookOmit<ExtArgs> | null
+    omit?: erc20tokenOmit<ExtArgs> | null
     /**
-     * Filter, which Book to fetch.
+     * Filter, which erc20token to fetch.
      */
-    where: BookWhereUniqueInput
+    where: erc20tokenWhereUniqueInput
   }
 
   /**
-   * Book findFirst
+   * erc20token findFirst
    */
-  export type BookFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type erc20tokenFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Book
+     * Select specific fields to fetch from the erc20token
      */
-    select?: BookSelect<ExtArgs> | null
+    select?: erc20tokenSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Book
+     * Omit specific fields from the erc20token
      */
-    omit?: BookOmit<ExtArgs> | null
+    omit?: erc20tokenOmit<ExtArgs> | null
     /**
-     * Filter, which Book to fetch.
+     * Filter, which erc20token to fetch.
      */
-    where?: BookWhereInput
+    where?: erc20tokenWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Books to fetch.
+     * Determine the order of erc20tokens to fetch.
      */
-    orderBy?: BookOrderByWithRelationInput | BookOrderByWithRelationInput[]
+    orderBy?: erc20tokenOrderByWithRelationInput | erc20tokenOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Books.
+     * Sets the position for searching for erc20tokens.
      */
-    cursor?: BookWhereUniqueInput
+    cursor?: erc20tokenWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Books from the position of the cursor.
+     * Take `±n` erc20tokens from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Books.
+     * Skip the first `n` erc20tokens.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Books.
+     * Filter by unique combinations of erc20tokens.
      */
-    distinct?: BookScalarFieldEnum | BookScalarFieldEnum[]
+    distinct?: Erc20tokenScalarFieldEnum | Erc20tokenScalarFieldEnum[]
   }
 
   /**
-   * Book findFirstOrThrow
+   * erc20token findFirstOrThrow
    */
-  export type BookFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type erc20tokenFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Book
+     * Select specific fields to fetch from the erc20token
      */
-    select?: BookSelect<ExtArgs> | null
+    select?: erc20tokenSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Book
+     * Omit specific fields from the erc20token
      */
-    omit?: BookOmit<ExtArgs> | null
+    omit?: erc20tokenOmit<ExtArgs> | null
     /**
-     * Filter, which Book to fetch.
+     * Filter, which erc20token to fetch.
      */
-    where?: BookWhereInput
+    where?: erc20tokenWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Books to fetch.
+     * Determine the order of erc20tokens to fetch.
      */
-    orderBy?: BookOrderByWithRelationInput | BookOrderByWithRelationInput[]
+    orderBy?: erc20tokenOrderByWithRelationInput | erc20tokenOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Books.
+     * Sets the position for searching for erc20tokens.
      */
-    cursor?: BookWhereUniqueInput
+    cursor?: erc20tokenWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Books from the position of the cursor.
+     * Take `±n` erc20tokens from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Books.
+     * Skip the first `n` erc20tokens.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Books.
+     * Filter by unique combinations of erc20tokens.
      */
-    distinct?: BookScalarFieldEnum | BookScalarFieldEnum[]
+    distinct?: Erc20tokenScalarFieldEnum | Erc20tokenScalarFieldEnum[]
   }
 
   /**
-   * Book findMany
+   * erc20token findMany
    */
-  export type BookFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type erc20tokenFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Book
+     * Select specific fields to fetch from the erc20token
      */
-    select?: BookSelect<ExtArgs> | null
+    select?: erc20tokenSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Book
+     * Omit specific fields from the erc20token
      */
-    omit?: BookOmit<ExtArgs> | null
+    omit?: erc20tokenOmit<ExtArgs> | null
     /**
-     * Filter, which Books to fetch.
+     * Filter, which erc20tokens to fetch.
      */
-    where?: BookWhereInput
+    where?: erc20tokenWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Books to fetch.
+     * Determine the order of erc20tokens to fetch.
      */
-    orderBy?: BookOrderByWithRelationInput | BookOrderByWithRelationInput[]
+    orderBy?: erc20tokenOrderByWithRelationInput | erc20tokenOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Books.
+     * Sets the position for listing erc20tokens.
      */
-    cursor?: BookWhereUniqueInput
+    cursor?: erc20tokenWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Books from the position of the cursor.
+     * Take `±n` erc20tokens from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Books.
+     * Skip the first `n` erc20tokens.
      */
     skip?: number
-    distinct?: BookScalarFieldEnum | BookScalarFieldEnum[]
+    distinct?: Erc20tokenScalarFieldEnum | Erc20tokenScalarFieldEnum[]
   }
 
   /**
-   * Book create
+   * erc20token create
    */
-  export type BookCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type erc20tokenCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Book
+     * Select specific fields to fetch from the erc20token
      */
-    select?: BookSelect<ExtArgs> | null
+    select?: erc20tokenSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Book
+     * Omit specific fields from the erc20token
      */
-    omit?: BookOmit<ExtArgs> | null
+    omit?: erc20tokenOmit<ExtArgs> | null
     /**
-     * The data needed to create a Book.
+     * The data needed to create a erc20token.
      */
-    data: XOR<BookCreateInput, BookUncheckedCreateInput>
+    data: XOR<erc20tokenCreateInput, erc20tokenUncheckedCreateInput>
   }
 
   /**
-   * Book createMany
+   * erc20token createMany
    */
-  export type BookCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type erc20tokenCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Books.
+     * The data used to create many erc20tokens.
      */
-    data: BookCreateManyInput | BookCreateManyInput[]
+    data: erc20tokenCreateManyInput | erc20tokenCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Book createManyAndReturn
+   * erc20token createManyAndReturn
    */
-  export type BookCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type erc20tokenCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Book
+     * Select specific fields to fetch from the erc20token
      */
-    select?: BookSelectCreateManyAndReturn<ExtArgs> | null
+    select?: erc20tokenSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Book
+     * Omit specific fields from the erc20token
      */
-    omit?: BookOmit<ExtArgs> | null
+    omit?: erc20tokenOmit<ExtArgs> | null
     /**
-     * The data used to create many Books.
+     * The data used to create many erc20tokens.
      */
-    data: BookCreateManyInput | BookCreateManyInput[]
+    data: erc20tokenCreateManyInput | erc20tokenCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Book update
+   * erc20token update
    */
-  export type BookUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type erc20tokenUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Book
+     * Select specific fields to fetch from the erc20token
      */
-    select?: BookSelect<ExtArgs> | null
+    select?: erc20tokenSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Book
+     * Omit specific fields from the erc20token
      */
-    omit?: BookOmit<ExtArgs> | null
+    omit?: erc20tokenOmit<ExtArgs> | null
     /**
-     * The data needed to update a Book.
+     * The data needed to update a erc20token.
      */
-    data: XOR<BookUpdateInput, BookUncheckedUpdateInput>
+    data: XOR<erc20tokenUpdateInput, erc20tokenUncheckedUpdateInput>
     /**
-     * Choose, which Book to update.
+     * Choose, which erc20token to update.
      */
-    where: BookWhereUniqueInput
+    where: erc20tokenWhereUniqueInput
   }
 
   /**
-   * Book updateMany
+   * erc20token updateMany
    */
-  export type BookUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type erc20tokenUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Books.
+     * The data used to update erc20tokens.
      */
-    data: XOR<BookUpdateManyMutationInput, BookUncheckedUpdateManyInput>
+    data: XOR<erc20tokenUpdateManyMutationInput, erc20tokenUncheckedUpdateManyInput>
     /**
-     * Filter which Books to update
+     * Filter which erc20tokens to update
      */
-    where?: BookWhereInput
+    where?: erc20tokenWhereInput
     /**
-     * Limit how many Books to update.
+     * Limit how many erc20tokens to update.
      */
     limit?: number
   }
 
   /**
-   * Book updateManyAndReturn
+   * erc20token updateManyAndReturn
    */
-  export type BookUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type erc20tokenUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Book
+     * Select specific fields to fetch from the erc20token
      */
-    select?: BookSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: erc20tokenSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Book
+     * Omit specific fields from the erc20token
      */
-    omit?: BookOmit<ExtArgs> | null
+    omit?: erc20tokenOmit<ExtArgs> | null
     /**
-     * The data used to update Books.
+     * The data used to update erc20tokens.
      */
-    data: XOR<BookUpdateManyMutationInput, BookUncheckedUpdateManyInput>
+    data: XOR<erc20tokenUpdateManyMutationInput, erc20tokenUncheckedUpdateManyInput>
     /**
-     * Filter which Books to update
+     * Filter which erc20tokens to update
      */
-    where?: BookWhereInput
+    where?: erc20tokenWhereInput
     /**
-     * Limit how many Books to update.
+     * Limit how many erc20tokens to update.
      */
     limit?: number
   }
 
   /**
-   * Book upsert
+   * erc20token upsert
    */
-  export type BookUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type erc20tokenUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Book
+     * Select specific fields to fetch from the erc20token
      */
-    select?: BookSelect<ExtArgs> | null
+    select?: erc20tokenSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Book
+     * Omit specific fields from the erc20token
      */
-    omit?: BookOmit<ExtArgs> | null
+    omit?: erc20tokenOmit<ExtArgs> | null
     /**
-     * The filter to search for the Book to update in case it exists.
+     * The filter to search for the erc20token to update in case it exists.
      */
-    where: BookWhereUniqueInput
+    where: erc20tokenWhereUniqueInput
     /**
-     * In case the Book found by the `where` argument doesn't exist, create a new Book with this data.
+     * In case the erc20token found by the `where` argument doesn't exist, create a new erc20token with this data.
      */
-    create: XOR<BookCreateInput, BookUncheckedCreateInput>
+    create: XOR<erc20tokenCreateInput, erc20tokenUncheckedCreateInput>
     /**
-     * In case the Book was found with the provided `where` argument, update it with this data.
+     * In case the erc20token was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<BookUpdateInput, BookUncheckedUpdateInput>
+    update: XOR<erc20tokenUpdateInput, erc20tokenUncheckedUpdateInput>
   }
 
   /**
-   * Book delete
+   * erc20token delete
    */
-  export type BookDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type erc20tokenDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Book
+     * Select specific fields to fetch from the erc20token
      */
-    select?: BookSelect<ExtArgs> | null
+    select?: erc20tokenSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Book
+     * Omit specific fields from the erc20token
      */
-    omit?: BookOmit<ExtArgs> | null
+    omit?: erc20tokenOmit<ExtArgs> | null
     /**
-     * Filter which Book to delete.
+     * Filter which erc20token to delete.
      */
-    where: BookWhereUniqueInput
+    where: erc20tokenWhereUniqueInput
   }
 
   /**
-   * Book deleteMany
+   * erc20token deleteMany
    */
-  export type BookDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type erc20tokenDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Books to delete
+     * Filter which erc20tokens to delete
      */
-    where?: BookWhereInput
+    where?: erc20tokenWhereInput
     /**
-     * Limit how many Books to delete.
+     * Limit how many erc20tokens to delete.
      */
     limit?: number
   }
 
   /**
-   * Book without action
+   * erc20token without action
    */
-  export type BookDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type erc20tokenDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Book
+     * Select specific fields to fetch from the erc20token
      */
-    select?: BookSelect<ExtArgs> | null
+    select?: erc20tokenSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Book
+     * Omit specific fields from the erc20token
      */
-    omit?: BookOmit<ExtArgs> | null
+    omit?: erc20tokenOmit<ExtArgs> | null
   }
 
 
@@ -1903,14 +1899,14 @@ export namespace Prisma {
   export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-  export const BookScalarFieldEnum: {
+  export const Erc20tokenScalarFieldEnum: {
     id: 'id',
-    title: 'title',
-    author: 'author',
-    year: 'year'
+    name: 'name',
+    symbol: 'symbol',
+    contractAddress: 'contractAddress'
   };
 
-  export type BookScalarFieldEnum = (typeof BookScalarFieldEnum)[keyof typeof BookScalarFieldEnum]
+  export type Erc20tokenScalarFieldEnum = (typeof Erc20tokenScalarFieldEnum)[keyof typeof Erc20tokenScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -1979,99 +1975,99 @@ export namespace Prisma {
    */
 
 
-  export type BookWhereInput = {
-    AND?: BookWhereInput | BookWhereInput[]
-    OR?: BookWhereInput[]
-    NOT?: BookWhereInput | BookWhereInput[]
-    id?: IntFilter<"Book"> | number
-    title?: StringFilter<"Book"> | string
-    author?: StringFilter<"Book"> | string
-    year?: IntFilter<"Book"> | number
+  export type erc20tokenWhereInput = {
+    AND?: erc20tokenWhereInput | erc20tokenWhereInput[]
+    OR?: erc20tokenWhereInput[]
+    NOT?: erc20tokenWhereInput | erc20tokenWhereInput[]
+    id?: IntFilter<"erc20token"> | number
+    name?: StringFilter<"erc20token"> | string
+    symbol?: StringFilter<"erc20token"> | string
+    contractAddress?: StringFilter<"erc20token"> | string
   }
 
-  export type BookOrderByWithRelationInput = {
+  export type erc20tokenOrderByWithRelationInput = {
     id?: SortOrder
-    title?: SortOrder
-    author?: SortOrder
-    year?: SortOrder
+    name?: SortOrder
+    symbol?: SortOrder
+    contractAddress?: SortOrder
   }
 
-  export type BookWhereUniqueInput = Prisma.AtLeast<{
+  export type erc20tokenWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: BookWhereInput | BookWhereInput[]
-    OR?: BookWhereInput[]
-    NOT?: BookWhereInput | BookWhereInput[]
-    title?: StringFilter<"Book"> | string
-    author?: StringFilter<"Book"> | string
-    year?: IntFilter<"Book"> | number
+    AND?: erc20tokenWhereInput | erc20tokenWhereInput[]
+    OR?: erc20tokenWhereInput[]
+    NOT?: erc20tokenWhereInput | erc20tokenWhereInput[]
+    name?: StringFilter<"erc20token"> | string
+    symbol?: StringFilter<"erc20token"> | string
+    contractAddress?: StringFilter<"erc20token"> | string
   }, "id">
 
-  export type BookOrderByWithAggregationInput = {
+  export type erc20tokenOrderByWithAggregationInput = {
     id?: SortOrder
-    title?: SortOrder
-    author?: SortOrder
-    year?: SortOrder
-    _count?: BookCountOrderByAggregateInput
-    _avg?: BookAvgOrderByAggregateInput
-    _max?: BookMaxOrderByAggregateInput
-    _min?: BookMinOrderByAggregateInput
-    _sum?: BookSumOrderByAggregateInput
+    name?: SortOrder
+    symbol?: SortOrder
+    contractAddress?: SortOrder
+    _count?: erc20tokenCountOrderByAggregateInput
+    _avg?: erc20tokenAvgOrderByAggregateInput
+    _max?: erc20tokenMaxOrderByAggregateInput
+    _min?: erc20tokenMinOrderByAggregateInput
+    _sum?: erc20tokenSumOrderByAggregateInput
   }
 
-  export type BookScalarWhereWithAggregatesInput = {
-    AND?: BookScalarWhereWithAggregatesInput | BookScalarWhereWithAggregatesInput[]
-    OR?: BookScalarWhereWithAggregatesInput[]
-    NOT?: BookScalarWhereWithAggregatesInput | BookScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"Book"> | number
-    title?: StringWithAggregatesFilter<"Book"> | string
-    author?: StringWithAggregatesFilter<"Book"> | string
-    year?: IntWithAggregatesFilter<"Book"> | number
+  export type erc20tokenScalarWhereWithAggregatesInput = {
+    AND?: erc20tokenScalarWhereWithAggregatesInput | erc20tokenScalarWhereWithAggregatesInput[]
+    OR?: erc20tokenScalarWhereWithAggregatesInput[]
+    NOT?: erc20tokenScalarWhereWithAggregatesInput | erc20tokenScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"erc20token"> | number
+    name?: StringWithAggregatesFilter<"erc20token"> | string
+    symbol?: StringWithAggregatesFilter<"erc20token"> | string
+    contractAddress?: StringWithAggregatesFilter<"erc20token"> | string
   }
 
-  export type BookCreateInput = {
-    title: string
-    author: string
-    year: number
+  export type erc20tokenCreateInput = {
+    name: string
+    symbol: string
+    contractAddress: string
   }
 
-  export type BookUncheckedCreateInput = {
+  export type erc20tokenUncheckedCreateInput = {
     id?: number
-    title: string
-    author: string
-    year: number
+    name: string
+    symbol: string
+    contractAddress: string
   }
 
-  export type BookUpdateInput = {
-    title?: StringFieldUpdateOperationsInput | string
-    author?: StringFieldUpdateOperationsInput | string
-    year?: IntFieldUpdateOperationsInput | number
+  export type erc20tokenUpdateInput = {
+    name?: StringFieldUpdateOperationsInput | string
+    symbol?: StringFieldUpdateOperationsInput | string
+    contractAddress?: StringFieldUpdateOperationsInput | string
   }
 
-  export type BookUncheckedUpdateInput = {
+  export type erc20tokenUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
-    title?: StringFieldUpdateOperationsInput | string
-    author?: StringFieldUpdateOperationsInput | string
-    year?: IntFieldUpdateOperationsInput | number
+    name?: StringFieldUpdateOperationsInput | string
+    symbol?: StringFieldUpdateOperationsInput | string
+    contractAddress?: StringFieldUpdateOperationsInput | string
   }
 
-  export type BookCreateManyInput = {
+  export type erc20tokenCreateManyInput = {
     id?: number
-    title: string
-    author: string
-    year: number
+    name: string
+    symbol: string
+    contractAddress: string
   }
 
-  export type BookUpdateManyMutationInput = {
-    title?: StringFieldUpdateOperationsInput | string
-    author?: StringFieldUpdateOperationsInput | string
-    year?: IntFieldUpdateOperationsInput | number
+  export type erc20tokenUpdateManyMutationInput = {
+    name?: StringFieldUpdateOperationsInput | string
+    symbol?: StringFieldUpdateOperationsInput | string
+    contractAddress?: StringFieldUpdateOperationsInput | string
   }
 
-  export type BookUncheckedUpdateManyInput = {
+  export type erc20tokenUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
-    title?: StringFieldUpdateOperationsInput | string
-    author?: StringFieldUpdateOperationsInput | string
-    year?: IntFieldUpdateOperationsInput | number
+    name?: StringFieldUpdateOperationsInput | string
+    symbol?: StringFieldUpdateOperationsInput | string
+    contractAddress?: StringFieldUpdateOperationsInput | string
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -2100,35 +2096,33 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
-  export type BookCountOrderByAggregateInput = {
+  export type erc20tokenCountOrderByAggregateInput = {
     id?: SortOrder
-    title?: SortOrder
-    author?: SortOrder
-    year?: SortOrder
+    name?: SortOrder
+    symbol?: SortOrder
+    contractAddress?: SortOrder
   }
 
-  export type BookAvgOrderByAggregateInput = {
+  export type erc20tokenAvgOrderByAggregateInput = {
     id?: SortOrder
-    year?: SortOrder
   }
 
-  export type BookMaxOrderByAggregateInput = {
+  export type erc20tokenMaxOrderByAggregateInput = {
     id?: SortOrder
-    title?: SortOrder
-    author?: SortOrder
-    year?: SortOrder
+    name?: SortOrder
+    symbol?: SortOrder
+    contractAddress?: SortOrder
   }
 
-  export type BookMinOrderByAggregateInput = {
+  export type erc20tokenMinOrderByAggregateInput = {
     id?: SortOrder
-    title?: SortOrder
-    author?: SortOrder
-    year?: SortOrder
+    name?: SortOrder
+    symbol?: SortOrder
+    contractAddress?: SortOrder
   }
 
-  export type BookSumOrderByAggregateInput = {
+  export type erc20tokenSumOrderByAggregateInput = {
     id?: SortOrder
-    year?: SortOrder
   }
 
   export type IntWithAggregatesFilter<$PrismaModel = never> = {

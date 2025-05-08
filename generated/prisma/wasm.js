@@ -117,11 +117,11 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
-exports.Prisma.BookScalarFieldEnum = {
+exports.Prisma.Erc20tokenScalarFieldEnum = {
   id: 'id',
-  title: 'title',
-  author: 'author',
-  year: 'year'
+  name: 'name',
+  symbol: 'symbol',
+  contractAddress: 'contractAddress'
 };
 
 exports.Prisma.SortOrder = {
@@ -136,7 +136,7 @@ exports.Prisma.QueryMode = {
 
 
 exports.Prisma.ModelName = {
-  Book: 'Book'
+  erc20token: 'erc20token'
 };
 
 /**
