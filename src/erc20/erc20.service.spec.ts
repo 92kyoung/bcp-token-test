@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { Erc20Service } from './erc20.service';
+import { ERC20Service } from './erc20.service';
 
-describe('Erc20Service', () => {
-  let service: Erc20Service;
+describe('ERC20Service', () => {
+  let service: ERC20Service;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [Erc20Service],
+      providers: [ERC20Service],
     }).compile();
 
-    service = module.get<Erc20Service>(Erc20Service);
+    service = module.get<ERC20Service>(ERC20Service);
   });
 
   it('should be defined', () => {

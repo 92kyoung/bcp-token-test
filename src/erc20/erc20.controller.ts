@@ -1,37 +1,38 @@
-
-import { Body, Controller, Post, UsePipes, ValidationPipe } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Post,
+  UsePipes,
+  ValidationPipe,
+} from '@nestjs/common';
 import { ERC20Service } from './erc20.service';
 import { CreateErc20Dto } from './dto/create-erc20.dto';
+import { SendERC20Token } from './dto/send-erc20.dto';
 
 @Controller('erc20')
-export class Erc20Controller {
+export class ERC20Controller {
   constructor(private erc20Service: ERC20Service) {}
+
+  @Post('/deployedTokenAddress/get')
+  getDeployedTokenAddress() {
+    return this.erc20Service.getDeployedTokenAddress();
+  }
 
   @Post('/create')
   @UsePipes(ValidationPipe)
-  createToken(
-    @Body() createErc20Dto : CreateErc20Dto
-  ) {
+  createToken(@Body() createErc20Dto: CreateErc20Dto) {
     return this.erc20Service.createErc20Token(createErc20Dto);
   }
 
   @Post('/mint')
-  mintToken() {
-    return this.erc20Service.mintErc20Token();
+  @UsePipes(ValidationPipe)
+  mintToken(@Body() sendc20Dto: SendERC20Token) {
+    return this.erc20Service.sendErc20Token(sendc20Dto, 'mint');
   }
 
   @Post('/transfer')
-  transferToken(
-    deployedTokenAddress: string,
-    signer: string,
-    toAddress: string,
-    amount: number,
-  ) {
-    return this.erc20Service.transferErc20Token(
-      signer,
-      deployedTokenAddress,
-      toAddress,
-      amount,
-    );
+  @UsePipes(ValidationPipe)
+  transferToken(@Body() sendc20Dto: SendERC20Token) {
+    return this.erc20Service.sendErc20Token(sendc20Dto, 'transfer');
   }
 }
