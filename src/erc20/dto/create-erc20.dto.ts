@@ -9,4 +9,5 @@ export class CreateErc20Dto {
     @IsNotEmpty()
     symbol: string;
     status: ERC20Status;
+    initialSupply: number;
 }
