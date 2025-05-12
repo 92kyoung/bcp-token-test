@@ -1,7 +1,14 @@
-db: 
-  host: progress
-  username: 'username'
-  password: 'userpassword'
-  synchronize: true
+# typeorm 설정
+# db: 
+#   host: progress
+#   username: 'username'
+#   password: 'userpassword'
+#   synchronize: true
 
-web3SignerURL: 'http://meta-net.hanati.co.kr:6100'
+url:
+  web3Signer: 'http://meta-net.hanati.co.kr:6100'
+  mainNet: 'http://meta-net.hanati.co.kr:8545'
+
+factoryCA:
+  ft: '0x689688E11EaF33fCE61968EBBe39997585c6108B'
+  nft: '0x0B5A3a6ae9285a6CE1C745CFF5f7C2bbd837773f'
