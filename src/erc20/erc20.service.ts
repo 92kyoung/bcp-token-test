@@ -1,9 +1,11 @@
-import { Injectable, OnModuleInit } from '@nestjs/common';
+import {
+  Injectable,
+  OnModuleInit,
+} from '@nestjs/common';
 import { ethers } from 'ethers';
 import * as fs from 'fs';
 import { TxService } from 'src/transaction/tx.service';
 import { CreateErc20Dto } from './dto/create-erc20.dto';
-import { PrismaService } from 'prisma/prisma.service';
 import { SendERC20Token } from './dto/send-erc20.dto';
 import * as config from 'config';
 
@@ -12,14 +14,12 @@ export class ERC20Service implements OnModuleInit {
   onModuleInit() {
     this.createdTokenEventListener();
   }
-  private readonly serverConfig = config.get('contract');
+  private readonly serverConfig = config.get('factoryCA');
 
-  private readonly tokenFactoryAddress = this.serverConfig.factory;
+  private readonly tokenFactoryAddress = this.serverConfig.ft;
 
-  constructor(
-    private readonly txService: TxService,
-    private prisma: PrismaService,
-  ) {}
+  constructor(private readonly txService: TxService) {}
+
   //utils로 분리
   private loadAbi(path: string) {
     return JSON.parse(fs.readFileSync(path, 'utf8')).abi;
@@ -94,7 +94,7 @@ export class ERC20Service implements OnModuleInit {
     const contractAddress = deployedTokenAddress; //'0xff7337FF5928a9Ba26Ff6EB90f7BE0fFF4303819'
     const contract = new ethers.Contract(contractAddress, abi, provider);
 
-    const data = contract.interface.encodeFunctionData(sendTxType, [
+    const data = contract.interface.encodeFunctionData('transfer', [
       toAddress,
       amount,
     ]);
@@ -127,7 +127,6 @@ export class ERC20Service implements OnModuleInit {
     // const provider = new ethers.WebSocketProvider(
     //   'ws://meta-net.hanati.co.kr:8545',
     // );
-    
 
     const abi = this.loadAbi(
       './hardhat/artifacts/contracts/ERC20Token.sol/ERC20TokenFactory.json',
@@ -137,10 +136,10 @@ export class ERC20Service implements OnModuleInit {
       abi,
       provider,
     );
-    
+
     // 기존 리스너 제거(중복방지)
     contract.removeAllListeners('TokenCreated');
-    
+
     contract.on(
       'TokenCreated',
       async (
@@ -150,13 +149,12 @@ export class ERC20Service implements OnModuleInit {
         initialSupply: number,
       ) => {
         console.log(`Token created: ${tokenAddress}`);
-        await this.prisma.erc20token.create({
-          data: {
-            name: name,
-            symbol: symbol,
-            contractAddress: tokenAddress,
-          },
-        });
+
+        const data = {
+          name: name,
+          symbol: symbol,
+          contractAddress: tokenAddress,
+        };
       },
     );
   }
