@@ -11,6 +11,7 @@ import { SendERC20Token } from './dto/send-erc20.dto';
 import { Erc20StatusValidationPipe } from './pipes/erc20-status-validation.pipe';
 import { ERC20Status } from './erc20.model';
 
+@UsePipes(ValidationPipe)
 @Controller('erc20')
 export class ERC20Controller {
   constructor(private erc20Service: ERC20Service) {}
@@ -21,7 +22,6 @@ export class ERC20Controller {
   }
 
   @Post('/create')
-  @UsePipes(ValidationPipe)
   createToken(
     @Body() body: CreateErc20Dto,
     @Body('status', Erc20StatusValidationPipe) status: ERC20Status,
@@ -30,13 +30,11 @@ export class ERC20Controller {
   }
 
   @Post('/mint')
-  @UsePipes(ValidationPipe)
   mintToken(@Body() sendc20Dto: SendERC20Token) {
     return this.erc20Service.sendErc20Token(sendc20Dto, 'mint');
   }
 
   @Post('/transfer')
-  @UsePipes(ValidationPipe)
   transferToken(@Body() sendc20Dto: SendERC20Token) {
     return this.erc20Service.sendErc20Token(sendc20Dto, 'transfer');
   }
