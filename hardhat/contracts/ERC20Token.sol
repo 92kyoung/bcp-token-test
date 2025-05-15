@@ -37,15 +37,22 @@ contract ERC20Token is
         _mint(to, amount);
     }
 
-      //batch 기능(custom)
-    function batchMint(address [] calldata addresses, uint256 [] calldata amounts) public onlyOwner{
-        for (uint i = 0; i < addresses.length; ++i){
-            mint(addresses[i],amounts[i]);
+    //batch 기능(custom)
+    function batchMint(
+        address[] calldata addresses,
+        uint256[] calldata amounts
+    ) public onlyOwner {
+        require(addresses.length == amounts.length, 'Mismatched array lengths');
+        require(addresses.length <= 100, 'Too many addresses'); // Optional: gas guard
+
+        for (uint i = 0; i < addresses.length; ++i) {
+            _mint(addresses[i], amounts[i]);
         }
     }
-    function batchBurn(uint256 [] calldata amounts) public onlyOwner{
-        for (uint i = 0; i < amounts.length; ++i){
-            _burn(msg.sender,amounts[i]);
+
+    function batchBurn(uint256[] calldata amounts) public onlyOwner {
+        for (uint i = 0; i < amounts.length; ++i) {
+            _burn(msg.sender, amounts[i]);
         }
     }
 
